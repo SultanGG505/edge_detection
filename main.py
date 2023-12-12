@@ -239,8 +239,8 @@ def laplacian_of_gaussian(kernel_size, standard_deviation, bound, path):
 
 
 kernel_sizes = [3, 7, 11]
-standard_deviations = [1.4]
-bound_parts = [4, 7, 10]
+standard_deviations = [3.0]
+bound_parts = [6, 12, 15]
 operators = ["sobel", "roberts", "kirsch"]
 imgs = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]
 
@@ -254,7 +254,7 @@ for k in kernel_sizes:
                     canny(k, s, b, o, i)
                     print(datetime.datetime.now())
 
-bounds = [2, 4, 7]
+bounds = bound_parts
 print("Start laplacian_of_gaussian")
 print(datetime.datetime.now())
 for k in kernel_sizes:
